@@ -1,0 +1,197 @@
+{
+  "navigation": [
+    {
+      "label": "Home",
+      "url": ""
+    },
+    {
+      "label": "Markets",
+      "url": "Markets",
+      "children": [
+        {
+          "label": "Missouri School Districts",
+          "url": "Markets&mkt=MOSchool"
+        },
+        {
+          "label": "New Jersey School Districts",
+          "url": "Markets&mkt=NJSchool"
+        },
+        {
+          "label": "New York Local Governments",
+          "url": "Markets&mkt=NYGovern"
+        },
+        {
+          "label": "North Carolina Local Governments",
+          "url": "Markets&mkt=NCGovern"
+        },
+        {
+          "label": "North Carolina Tax Assessors and Collectors",
+          "url": "Markets&mkt=NCPAAS"
+        },
+        {
+          "label": "Pennsylvania Local Governments",
+          "url": "Markets&mkt=PAGovern"
+        },
+        {
+          "label": "Pennsylvania School Districts",
+          "url": "Markets&mkt=PASchool"
+        },
+        {
+          "label": "Rhode Island Local Governments and School Districts",
+          "url": "Markets&mkt=RISchool"
+        },
+        {
+          "label": "Virginia Local Governments",
+          "url": "Markets&mkt=VAGovern"
+        },
+        {
+          "label": "Virginia School Districts",
+          "url": "Markets&mkt=VASchool"
+        },
+        {
+          "label": "Virginia Commissioners of the Revenue and Treasurers",
+          "url": "Markets&mkt=VAPAAS"
+        }
+      ]
+    },
+    {
+      "label": "Products",
+      "url": "Products",
+      "children": [
+        {
+          "label": "Financials",
+          "url": "Products&location=Financials"
+        },
+        {
+          "label": "Human Resources",
+          "url": "Products&location=HR"
+        },
+        {
+          "label": "Land & Tax",
+          "url": "Products&location=Tax"
+        },
+        {
+          "label": "Community Impact/other Revenue Applications",
+          "url": "Products&location=PS"
+        },
+        {
+          "label": "Basis Technologies and System Security",
+          "url": "Products&location=Basis"
+        },
+        {
+          "label": "System Hosting/Cloud Options",
+          "url": "Products&location=System_housing"
+        },
+        {
+          "label": "Reporting Capabilities and Dashboards",
+          "url": "Products&location=Reporting_Capabilities"
+        },
+        {
+          "label": "Documents and Content Management",
+          "url": "Products&location=Documents"
+        }
+      ]
+    },
+    {
+      "label": "Services",
+      "url": "Services",
+      "children": [
+        {
+          "label": "Support",
+          "url": "Services&location=Support"
+        },
+        {
+          "label": "Training",
+          "url": "Services&location=Training"
+        },
+        {
+          "label": "Implementation",
+          "url": "Services&location=Implementation"
+        }
+      ]
+    },
+    {
+      "label": "About",
+      "url": "About",
+      "children": [
+        {
+          "label": "Mission Statement",
+          "url": "About Us&location=missionS__about"
+        },
+        {
+          "label": "Resume",
+          "url": "About Us&location=resume__about"
+        },
+        {
+          "label": "Customer Profiles",
+          "url": "About Us&location=customer__profiles__section"
+        },
+        {
+          "label": "Employee Profiles",
+          "url": "About Us&location=employeeP__about"
+        },
+        {
+          "label": "Keystone Management",
+          "url": "About Us&location=keystoneM__about"
+        },
+        {
+          "label": "Business Partners",
+          "url": "About Us&location=businessP__about"
+        }
+      ]
+    },
+    {
+      "label": "Careers",
+      "url": "Careers",
+      "children": [
+        {
+          "label": "Current Openings",
+          "url": "Careers#career__openings"
+        },
+        {
+          "label": "Submit Resume",
+          "url": "Careers#submit__your__resume"
+        }
+      ]
+    },
+    {
+      "label": "News & Events",
+      "url": "News",
+      "children": [
+        {
+          "label": "Trade Associations",
+          "url": "News#trade__associations__section"
+        },
+        {
+          "label": "User Group Meetings",
+          "url": "News#user__group__meetings__section"
+        },
+        {
+          "label": "Training & Webinars",
+          "url": "News#webinars__section"
+        }
+      ]
+    },
+    {
+      "label": "Contact",
+      "url": "Contact"
+    },
+    {
+      "label": "Client Care",
+      "url": "../ClientCare",
+      "isExternal": true
+    }
+  ],
+  "metadata": {
+    "breakpoint": 1200,
+    "logo": {
+      "desktop": "images/logos/KIS_logo.png",
+      "mobile": "images/logos/KIS_logo.png",
+      "header": "images/logos/kis_logo_updated.png"
+    },
+    "responsive": {
+      "desktop": "flex",
+      "mobile": "none"
+    }
+  }
+} 

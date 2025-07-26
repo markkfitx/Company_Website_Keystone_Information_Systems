@@ -171,27 +171,6 @@
           "url": "News#webinars__section"
         }
       ]
-    },
-    {
-      "label": "Contact",
-      "url": "Contact"
-    },
-    {
-      "label": "Client Care",
-      "url": "../ClientCare",
-      "isExternal": true
     }
-  ],
-  "metadata": {
-    "breakpoint": 1200,
-    "logo": {
-      "desktop": "images/logos/KIS_logo.png",
-      "mobile": "images/logos/KIS_logo.png",
-      "header": "images/logos/kis_logo_updated.png"
-    },
-    "responsive": {
-      "desktop": "flex",
-      "mobile": "none"
-    }
-  }
+  ]
 } 

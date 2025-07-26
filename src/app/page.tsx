@@ -7,7 +7,7 @@ import RocketLogo from "@/img/rocket-software-logo.png"
 export default function Home() {
   return (
     
-      <div className="pt-4 px-4 py-24 xl:px-26 lg:px-20 md:px-14 px-8 lg:py-32 2xl:max-w-[1400px]">
+      <div className="px-4 xl:px-26 lg:px-20 md:px-14 px-8 lg:py-32 py-24 2xl:max-w-[1400px]">
         <Hero>
         <div className="flex justify-center">
             <a

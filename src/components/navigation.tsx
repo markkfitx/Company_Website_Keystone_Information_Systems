@@ -6,7 +6,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import NavDB from "@/data/navigation.json";
 import Image from "next/image";
@@ -18,7 +17,7 @@ import { ReactNode } from "react";
 
 function NavigationContent() {
   return (
-    <NavigationMenu className="px-12">
+    <NavigationMenu viewport={false} className="px-12">
       <NavigationMenuList>
         {NavDB.navigation.map((item) =>
           item.children && item.children.length > 0 ? (
@@ -47,7 +46,6 @@ function NavigationContent() {
           )
         )}
       </NavigationMenuList>
-      <NavigationMenuViewport />
     </NavigationMenu>
   );
 }

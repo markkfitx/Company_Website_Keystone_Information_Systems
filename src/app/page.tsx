@@ -42,7 +42,7 @@ export default function Home() {
         </div>
         {/* End Title */}
         <div className="mx-auto mt-5 max-w-2xl text-center">
-          <p className="text-muted-foreground text-xl">
+          <p className="text-muted-foreground text-lg">
             We Specialize in Developing Efficient and Cost Effective Enterprise Resource Planning Systems for Local Governments and Public School Districts.
           </p>
         </div>

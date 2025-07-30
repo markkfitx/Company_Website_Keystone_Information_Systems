@@ -22,25 +22,47 @@ function NavigationContent() {
         {NavDB.navigation.map((item) =>
           item.children && item.children.length > 0 ? (
             <NavigationMenuItem key={`${item.label}-${item.url}`}>
+              {/* Top-level trigger */}
               <NavigationMenuTrigger>
-                <Link href={item.url} className="font-medium">{item.label}</Link>
+                {item.label}
               </NavigationMenuTrigger>
+
+              {/* Single panel showing all submenus */}
               <NavigationMenuContent>
-                <ul className="grid min-w-[250px] w-max">
+                <div className="grid grid-cols-2 gap-6 p-4 min-w-[600px]">
                   {item.children.map((subItem) => (
-                    <li key={`${subItem.label}-${subItem.url}`}>
-                      <NavigationMenuLink asChild>
-                        <Link href={subItem.url} className="font-medium">{subItem.label}</Link>
-                      </NavigationMenuLink>
-                    </li>
+                    <div key={`${subItem.label}-${subItem.url}`} className="flex flex-col space-y-2">
+                      {/* Second-level item title */}
+                      <Link href={subItem.url} className="font-semibold text-base hover:underline">
+                        {subItem.label}
+                      </Link>
+
+                      {/* Third-level items */}
+                      {subItem.children && subItem.children.length > 0 && (
+                        <ul className="ml-2 flex flex-col space-y-1">
+                          {subItem.children.map((thirdItem) => (
+                            <li key={`${thirdItem.label}-${thirdItem.url}`}>
+                              <Link
+                                href={thirdItem.url}
+                                className="text-sm text-muted-foreground hover:text-foreground hover:underline"
+                              >
+                                {thirdItem.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
           ) : (
             <NavigationMenuItem key={`${item.label}-${item.url}`}>
               <NavigationMenuLink asChild>
-                <Link href={item.url} className="font-medium">{item.label}</Link>
+                <Link href={item.url} className="font-medium hover:underline">
+                  {item.label}
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           )

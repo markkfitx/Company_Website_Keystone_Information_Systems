@@ -1,8 +1,9 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { Sheet, SheetTrigger, SheetContent, SheetClose, SheetTitle } from "@/components/ui/sheet"
+import { Sheet, SheetTrigger, SheetContent, SheetClose, SheetTitle, SheetFooter } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
+import ThemeDropdown from "./themeDropDown";
 import { Menu, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import NavDB from "@/data/navigation.json"
@@ -64,38 +65,58 @@ export default function MobileNavbar() {
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="left" className="p-6 flex flex-col space-y-4">
-        <SheetTitle className="opacity-0">Keystone Information System</SheetTitle>
-
-        {NavDB.navigation.map((item) =>
-          item.children && item.children.length > 0 ? (
-            <HydrationSafeCollapsible key={item.url} label={item.label}>
-              {item.children.map((subItem) => (
-                <Link
-                  key={`${subItem.label}-collapsable-${subItem.url}`}
-                  href={subItem.url}
-                  className="text-base hover:underline py-1"
-                >
-                  {subItem.label}
-                </Link>
-              ))}
-            </HydrationSafeCollapsible>
-          ) : (
-            <Link
-              key={`${item.label}-collapsable-${item.url}`}
-              href={item.url}
-              className="text-lg font-medium hover:underline"
-            >
-              {item.label}
-            </Link>
-          )
-        )}
-
-        <SheetClose asChild>
-          <Button variant="outline" className="mt-6">
-            Close
-          </Button>
-        </SheetClose>
+      <SheetContent side="left" className="p-6 flex flex-col justify-between">
+        <div className="flex flex-col space-y-4">
+          <SheetTitle className="opacity-0">Keystone Information System</SheetTitle>
+          {NavDB.navigation.map((item) =>
+            item.children && item.children.length > 0 ? (
+              <HydrationSafeCollapsible key={item.url} label={item.label}>
+                {item.children.map((subItem) =>
+                  subItem.children && subItem.children.length > 0 ? (
+                    <HydrationSafeCollapsible
+                      key={`${subItem.label}-nested-${subItem.url}`}
+                      label={subItem.label}
+                    >
+                      {subItem.children.map((thirdItem) => (
+                        <Link
+                          key={`${thirdItem.label}-third-${thirdItem.url}`}
+                          href={thirdItem.url}
+                          className="text-sm hover:underline py-1 ml-4"
+                        >
+                          {thirdItem.label}
+                        </Link>
+                      ))}
+                    </HydrationSafeCollapsible>
+                  ) : (
+                    <Link
+                      key={`${subItem.label}-collapsable-${subItem.url}`}
+                      href={subItem.url}
+                      className="text-base hover:underline py-1"
+                    >
+                      {subItem.label}
+                    </Link>
+                  )
+                )}
+              </HydrationSafeCollapsible>
+            ) : (
+              <Link
+                key={`${item.label}-collapsable-${item.url}`}
+                href={item.url}
+                className="text-lg font-medium hover:underline"
+              >
+                {item.label}
+              </Link>
+            )
+          )}
+        </div>
+          <div className="flex flex-row gap-2 justify-center items-center w-full">
+            <SheetTrigger asChild>
+              <Button variant="outline" className="w-5/6">
+                ClientCare
+              </Button>
+            </SheetTrigger>
+            <ThemeDropdown/>
+          </div>
       </SheetContent>
     </Sheet>
   )
